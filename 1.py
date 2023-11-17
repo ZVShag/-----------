@@ -35,8 +35,8 @@ class Animal(object):
                 print('Неверно указан вес')
         
     def info(self):
-        with open('animal.txt','a',encoding='utf-8') as f:
-            f.writelines(f'Класс:{self.vid}, имя:{self.name}, возраст:{self.age}, вес:{self.ves}\n')
+        
+            print(f'Класс:{self.vid}, имя:{self.name}, возраст:{self.age}, вес:{self.ves}\n')
 
 class Tiger(Animal):
     def __init__(self,name,area,color):
@@ -47,8 +47,7 @@ class Tiger(Animal):
 
     def info(self):
         super().info()
-        with open('animal.txt','a',encoding='utf-8') as f:
-            f.writelines(f'Ареал обитания:{self.area}, окрас:{self.color}\n')
+        print(f'Ареал обитания:{self.area}, окрас:{self.color}\n')
 
 class Krokidile(Tiger):
     pass
